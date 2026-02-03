@@ -1,0 +1,22 @@
+#!/usr/bin/python3
+
+# prints a sentence in a centered "box" of correct width
+
+sentence = input("sentence: ")
+
+screen_widht = 80
+text_widht = len(sentence)
+box_widht = text_widht + 6
+left_margin = (screen_widht - box_widht) // 2
+
+print("text_widht: ", text_widht)
+print("box_widht: ", box_widht)
+print("left_margin: ", left_margin)
+
+print()
+print(" " * left_margin + "+"   + "-" * (box_widht - 2) +   "+")
+print(" " * left_margin + "|  " + " " * text_widht      + "  |")
+print(" " * left_margin + "|  " + sentence              + "  |")
+print(" " * left_margin + "|  " + " " * text_widht      + "  |")
+print(" " * left_margin + "+"   + "-" * (box_widht - 2) +   "+")
+print()
